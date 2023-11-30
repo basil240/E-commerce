@@ -42,7 +42,46 @@
     <body>
         <section id="header">
 
-        </section id="hero">
+        </section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="pictures/image 3.webp" width="100%" id="Mainimg" alt="">
+            <div class="single-pro-details">
+                <h6>Home /T-Shirt</h6>
+                <h4> Men's Fashion T Shirt</h4>
+                <h3>$140.00</h3>
+                <select>
+                    <option> Select size</option>
+                    <option> XXL</option>
+                    <option> Large</option>
+                    <option> Small</option>
+                </select>
+                <input type="number" Value="1">
+                <button class="normal"> Add to Cart</button>
+                <h4>Product Details</h4>
+                <span>
+                    The Gildan Ultra Cotton T-shirt is made from a substantail 6.0 oz. per sq, yad fabric constructed from 100% cotton, this classic fit preshrunk jesey knit provides unmated comfort with each wear. Featuring a taped neck and shoulder, and a seamless double-needle collar, and available in a rangeof colors, it offers it all in the ultimate haed-turning package
+                </span>
+
+            </div>
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="pictures/image 1.webp" width="100%" class="small-img" alt="">
+
+                </div>
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="pictures/gown 1.jpg" width="100%" class="small-img" alt="">
+
+            </div>
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="pictures/gown 2.jpg" width="100%" class="small-img" alt="">
+
+        </div>
+        <div class="small-img-group">
+            <div class="small-img-col">
+                <img src="pictures/gown 3.jpg" width="100%" class="small-img" alt="">
         <section>
 
         </section>
@@ -91,6 +130,27 @@
                                         </div>
                                         <h4>$78</h4>
                                     </div>
+                                    <footer class="section-p1">
+
+                                    </footer>
+            
+                                    <script>
+                                        var MainImg = document.getElementbyId("MainImg");
+                                        var smallimg =document.getElementsByClassName("small-img");
+                                        
+                                        smallimg[0].onlick = function(){
+                                            MainImg.src = smallimg[0].src;
+                                        }
+                                        smallimg[1].onlick = function(){
+                                            MainImg.src = smallimg[1].src;
+                                        }
+                                        smallimg[2].onlick = function(){
+                                            MainImg.src = smallimg[2].src;
+                                        }
+                                        smallimg[3].onlick = function(){
+                                            MainImg.src = smallimg[3].src;
+                                        }
+                                    </script>
                                     <div class="pro-container">
                                         <div class="pro">
                                             <img src="pictures/T-shirt 2.webp" alt="">
@@ -134,13 +194,20 @@
                                                                 </div>
                                                                 <h4>$90</h4>
                                                             </div>
-                                                            <section id="barner"></section>
+                                                            <section id="barnner" class="section>
+                                                            </section>
+                                                            <sectionid="barnner" class="section-m1" >
                                                             <h4>Repair service</h4>
-                                                            <h2>Upto <span>70% off</span>  all T Shirts and Assecessories</h2>
+                                                            <h2>Upto <span>70% off</span> all T Shirts and Assecessories</h2>
+                                                            <button>explore more</button
+                                                            </sectionid=>
+                                                            
                                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                                 </div>
                             </div>
                         </section>
+                        
+                
             
                     </section>
         
@@ -152,7 +219,7 @@
     </body>
 
 
-    <script src="script.js"></script>
+    <script src="script.js"></scr>
 </body>
 
 </html>
