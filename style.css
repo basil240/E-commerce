@@ -344,3 +344,46 @@ body {
         a:hover {
             text-decoration: underline;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: blue;
+            text-align: right;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: yellowgreen;
+            color: white;
+            padding: 1em;
+            text-align: left;
+        }
