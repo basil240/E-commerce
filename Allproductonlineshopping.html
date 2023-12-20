@@ -15,16 +15,15 @@
         <a href="#"><img src="pictures/my logo.png" class="logo" alt="|"></a>
     </header>
     <header>
-        <h1>Online Shopping Dashboard</h1>
+        <h1 style="color: red;" >Online Shopping Dashboard</h1>
     </header>
     <nav>
-        <a href="#products">Products</a> |
-        <a href="#cart">Shopping Cart</a> |
-        <a href="#account">My Account</a>
+        <a href="#products" style="color: blue;" >Products</a> |
+        <a href="#cart" style="color: red;" >Shopping Cart</a> |
+        <a href="#account" style="color: green;" >My Account</a>
     </nav>
     <section id="products">
-        <h2>Featured Products</h2>
-        <!-- Add product listing here -->
+        <h2 style="color: blue;" >Featured Products</h2>
         <ul>
             <li <div class="small-img-group">
                 <div class="small-img-col">
@@ -34,27 +33,88 @@
             <li <div class="small-img-group">
                 <div class="small-img-col">
                     <img src="pictures/car 2.jpg" width="50%" class="small-img" alt="">
-                    <h4>$7,000</h4>>Product 2</li>
+                    <h4>$7,000</h4>Product 2</li>
             <li <div class="small-img-group">
                 <div class="small-img-col">
                     <img src="pictures/car 3.jpg" width="50%" class="small-img" alt="">
-                    <h4>$7,000</h4>>Product 3</li>
+                    <h4>$7,000</h4>Product 3</li>
         </ul>
     </section>
-    <section id="cart">
-        <h2>Shopping Cart</h2>
-         <p>Make your Car purchase with 2years gaurantee, @ $6,000.00 & $7,000 .</p>
-    </section>
+    <h1 style="color: BLUE;" >Welcome to Our Online Store</h1>
+
+    <div class="product" id="product1">
+        <h2 style="color: green;">Product 1</h2>
+        <p>Price: $10.00</p>
+        <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+    </div>
+
+    <div class="product" id="product2">
+        <h2  style="color: red;">Product 2</h2>
+        <p>Price: $15.00</p>
+        <button onclick="addToCart('Product 2', 15.00)">Add to Cart</button>
+    </div>
+
+    <div id="cart">
+        <h2 style="color: red;" >Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script>
+        var cartItems = [];
+        var cartTotal = 0.00;
+
+        function addToCart(productName, productPrice) {
+            cartItems.push({ name: productName, price: productPrice });
+            updateCart();
+        }
+
+        function updateCart() {
+            var cartList = document.getElementById("cart-items");
+            var totalSpan = document.getElementById("cart-total");
+
+            // Clear the previous content
+            cartList.innerHTML = "";
+
+            // Update the cart list
+            cartItems.forEach(function (item) {
+                var listItem = document.createElement("li");
+                listItem.textContent = item.name + " - $" + item.price.toFixed(2);
+                cartList.appendChild(listItem);
+            });
+
+            // Update the total
+            cartTotal = cartItems.reduce(function (total, item) {
+                return total + item.price;
+            }, 0);
+
+            totalSpan.textContent = cartTotal.toFixed(2);
+        }
+
+        function checkout() {
+            // Here you would typically send the cart data to the server for processing
+            // and perform any necessary actions (e.g., payment processing).
+            alert("Checkout completed! Total amount: $" + cartTotal.toFixed(2));
+            
+            // Reset the cart after checkout
+            cartItems = [];
+            updateCart();
+        }
+    </script>
+
     
     <section id="account">
-        <h2>My Account</h2>
-        <!-- Add user account information here -->
-        <p>Welcome, User123!</p>
-        <section id="registration">
+        <h2 style="color: green;" >My Account</h2>
+        <p style="color: red;" >Welcome, User!</p>
             <h2>Create an Account</h2>
-            <p>If you don't have an account yet, you can <a href="https://www.yahoo.com">register here</a>.</p>
-        </section>
+            <p style="color: red;"  >If you don't have an account yet, you can <a href="https://workspace.google.com/business/signup/contact?hl=en&source=gafb-lp_gmail-hero-en&ga_region=noram&ga_country=us&ga_lang=en&__utma=61317162.463125879.1693665777.1702988863.1703062401.3&__utmb=61317162.0.10.1703062401&__utmc=61317162&__utmx=-&__utmz=61317162.1703062401.3.3.utmcsr=google|utmgclid=EAIaIQobChMI55La6dGdgwMVh5lQBh2vAANDEAAYASAAEgLupfD_BwE|utmgclsrc=aw.ds|utmccn=emea-ng-all-en-dr-bkws-all-hv-trial-e-t2-1011339|utmcmd=cpc|utmctr=KW_new%20gmail%20account-ST_new%20gmail%20account|utmcct=text-ad-none-none-DEV_c-CRE_613416419417-ADGP_Hybrid%20|%20BKWS%20-%20EXA%20|%20Txt%20~%20Gmail%20~%20Account-KWID_43700073321980478-kwd-1095593135-userloc_1010283&__utmv=-&__utmk=174880229">register here</a>.</p>
     </section>
+    <h1 style="color: green;" >Welcome to Our all product online shopping.html</h1>
+    <video width="640" height="360" controls>
+        <source src="pictures/alx biya video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -116,9 +176,7 @@
     <section>
         <h2>Email Registration</h2>
         <p>To register via email, please send an email to:</p>
-
-        <!-- Email Registration Link -->
-        <a href="mailto:your@email.com">your@email.com</a>
+        <a href="mailto:iekpei@yahoo.com">iekpei@yahoo.com</a>
     </section>
 
     <body>
